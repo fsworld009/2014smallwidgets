@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="star_rating.css">
+    <title>Star rating</title>
+</head>
+<body>
+    <div id="star_rating">
+        <!-- emmet: div.star_base.pos$@-{☆}*5-->
+        <div class="star_base pos5">☆</div>
+        <div class="star_base pos4">☆</div>
+        <div class="star_base pos3">☆</div>
+        <div class="star_base pos2">☆</div>
+        <div class="star_base pos1">☆</div>
+       
+        <!-- emmet: div.star_rate.pos${★}*5-->
+        
+        <div class="star_rate pos1" onmouseover="star_rating.hover(1)" onmouseout="star_rating.hover_out()" onclick="star_rating.rate(1)">★</div>
+        <div class="star_rate pos2" onmouseover="star_rating.hover(2)" onmouseout="star_rating.hover_out()" onclick="star_rating.rate(2)">★</div>
+        <div class="star_rate pos3" onmouseover="star_rating.hover(3)" onmouseout="star_rating.hover_out()" onclick="star_rating.rate(3)">★</div>
+        <div class="star_rate pos4" onmouseover="star_rating.hover(4)" onmouseout="star_rating.hover_out()" onclick="star_rating.rate(4)">★</div>
+        <div class="star_rate pos5" onmouseover="star_rating.hover(5)" onmouseout="star_rating.hover_out()" onclick="star_rating.rate(5)">★</div>
+        
+        
+        
+        
+        
+    </div>
+
+    <div style="height: 40px">&nbsp;</div>
+    <div id="rating_display"></div>
+    <script src="star_rating.js"></script>
+</body>
+</html>

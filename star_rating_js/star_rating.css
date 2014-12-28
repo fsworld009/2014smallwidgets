@@ -1,0 +1,51 @@
+
+
+#star_rating {
+    position: relative;   
+}
+
+#star_rating div{
+    position: absolute;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    font-family: Consolas;
+    padding: 0;
+    margin: 0;
+}
+
+#star_rating star_base{
+    color: black;
+    z-index: 1;
+}
+
+#star_rating .star_rate{
+    color: blue;
+    opacity: 0;
+    z-index: 2;
+}
+
+#star_rating .star_rate:hover{
+    cursor: pointer;
+}
+
+
+#star_rating .pos5 {
+    left: 128px;
+}
+
+#star_rating .pos4 {
+    left: 96px;
+}
+
+#star_rating .pos3 {
+    left: 64px;
+}
+
+#star_rating .pos2 {
+    left: 32px;
+}
+
+#star_rating .pos1 {
+    left: 0px;
+}

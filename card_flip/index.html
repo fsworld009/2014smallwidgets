@@ -1,0 +1,82 @@
+<!--hw2. 
+hover over image, see a transition that
+it flips into a different image
+when mouse left the image, change it back
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#container1_out {
+    width: 220px;
+    height: 333px;
+    
+}
+
+div.container1{
+    width: 100%;
+    height: 100%;
+}
+
+#container1_inside {
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  position: relative;
+}
+
+#container1_out:hover #container1_inside {
+  transform: rotateY(180deg);   
+  /*flip inside container when the mouse hovers over outside container
+    you can just flip the outside container but the width of the container varies when flipping,
+    which may let the transform animation break easily because the mouse may hover out the outside container.
+  */
+}
+
+#container1_front {
+    position: absolute;  /* if you eliminate this line, this div won't become invisible when flipping,
+                            image will be gone but it still shows as a white block, make #container1_back shows in the wrong position */
+    
+    backface-visibility: hidden;  /* make div#container1_front invisible when flipping the card*/
+}
+
+#container1_back {
+    backface-visibility: hidden; /* make div#container1_back invisible*/
+    transform: rotateY(180deg);  /* make div#container1_back invisible*/
+    
+    /* this div is invisible by default because it rotates to backface and the backface is invisible*/
+    
+}
+
+h1, h2{
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+<h1>CSS3 practice: Card Flip</h1>
+<h2>By Andy Lee 11.2.2014</h2>
+<h3>(Doesn't work in IE)</h3>
+<p>===== Put the mouse on the card =====</p>
+<div id="container1_out">
+    <div id="container1_inside" class="container1">
+        <div id="container1_front" class="container1">
+          <img src="card1.jpg"/>
+        </div>
+        <div id="container1_back" class="container1">
+          <img src="card2.jpg"/>
+        </div>
+    </div>
+</div>
+=====
+<div>
+Image source:<br/>
+<a href="http://www.consolesandgadgets.co.uk/catalog/images/Marked%20Poker%20Cards-3.jpg" target="_blank">http://www.consolesandgadgets.co.uk/catalog/images/Marked%20Poker%20Cards-3.jpg</a><br/>
+<br/>
+CSS reference:<br/>
+<a href="http://css3.bradshawenterprises.com/flip/" target="_blank">http://css3.bradshawenterprises.com/flip/</a>
+</div>
+</body>
+</html>

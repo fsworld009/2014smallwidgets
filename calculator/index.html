@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"> 
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="calculator.css" />
+</head>
+<body onload="calculator.clear()">
+  <div id="calculator">
+    <div class="display_container">
+      <div class="formula">333&nbsp;</div>
+      <div class="memory_sign">&nbsp;</div>
+      <div class="error_sign">E</div>
+      <div class="display">03333333333333333333333333333333sgsgfdgds</div>
+
+    </div>
+    <div class="buttons">
+      <button onclick="calculator.input('←')">←</button><button onclick="calculator.input('CE')">CE</button><button onclick="calculator.input('C')">C</button><button onclick="calculator.input('±')">±</button><button onclick="calculator.input('√')">√</button><br/>
+      <button onclick="calculator.input(7)">7</button><button onclick="calculator.input(8)">8</button><button onclick="calculator.input(9)">9</button><button onclick="calculator.input('/')">/</button><button onclick="calculator.input('M+')">M+</button><br/>
+      <button onclick="calculator.input(4)">4</button><button onclick="calculator.input(5)">5</button><button onclick="calculator.input(6)">6</button><button onclick="calculator.input('*')">*</button><button onclick="calculator.input('M-')">M-</button><br/>
+      <button onclick="calculator.input(1)">1</button><button onclick="calculator.input(2)">2</button><button onclick="calculator.input(3)">3</button><button onclick="calculator.input('-')">-</button><button onclick="calculator.input('MR')">MR</button><br/>
+      <button onclick="calculator.input(0)">0</button><button onclick="calculator.input('.')">.</button><button onclick="calculator.equals()">=</button><button onclick="calculator.input('+')">+</button><button onclick="calculator.input('MC')">MC</button>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
